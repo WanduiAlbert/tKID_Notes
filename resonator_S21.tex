@@ -1,0 +1,29 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+
+
+\begin{document}
+\title{Deriving the Transmission Equation for a Loaded Resonator}
+
+In the first Jonas' paper that I read, the equation for the transmission of the resonator was given as an already well established fact. The equation is: 
+
+\begin{equation}
+S_{21} = 1 - \frac{Q_r}{Q_c}\frac{1}{1 + j 2 Q_r \Delta x}.
+\end{equation}
+ 
+Here $\Delta x = \frac{\omega - \omega_r}{\omega_r}$ is the fractional detuning of the resonator, $Q_r$ is the quality factor of the resonator and $Q_c$ is the coupling quality factor.
+
+This is an akward starting point for the discussion on resonators simply because of the sheer amount of background info needed to get to this point. First, the relationship between the impedance of the resonator and the transmission needs to be well understood. Secondly, the impact of the coupling of the resonator to the load through the external circuit also needs to be thoroughly investigated. For the tKIDs that I am working on, I was infact most of all worried by the fact that capacitors were used to couple the resonator to the external circuit. This would certainly change the resonant frequency of the resonator and I was curious to understand how this effect was suitably accounted for. In addition, the expression for the coupling Q-factor given in the McCarrick paper as 
+
+\begin{equation}
+Q_c = \frac{C_i}{\left(Z_0/2\right) \omega_r \left(C_c/2\right)^2}
+\end{equation} 
+
+was downright mystifying. Here $Z_0$ is the characteristic impedance of the transmission line, $C_c$ is the capacitance of the coupling capacitor and $C_i$ is the internal capacitance of the unloaded resonator. While the equation was derived under reasonable assumptions, I could not arrive at the same expression through other approaches. 
+
+The solution finally came while studying Khalili's paper. The discussion that follows here will rely heavily on the expressions that they derive albeit I will go at it step-by-step for completeness of the record. My goal is to fully document the general equations that describe a resonator in a circuit and understand the impact that loading has on the two resonator parameters; the resonant frequency and the quality factor.
+
+\end{document}
